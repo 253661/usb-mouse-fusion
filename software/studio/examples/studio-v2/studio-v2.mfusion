@@ -1,0 +1,638 @@
+{
+  "format": "mouse-fusion-studio",
+  "version": 1,
+  "trigger_schema_version": 3,
+  "run_policy_schema_version": 1,
+  "bypass_schema_version": 1,
+  "modes": [
+    {
+      "name": "模式 1",
+      "points": [],
+      "image": null,
+      "perturbation": {
+        "amplitude": 0,
+        "frequency_hz": 1,
+        "seed": 0
+      },
+      "mode_id": "d7870aab9a964b7093239d921e0431db",
+      "triggers": [
+        {
+          "buttons": [
+            "side1"
+          ],
+          "device": "mouse",
+          "gesture": "click",
+          "action": "toggle_mode",
+          "target_mode": "d7870aab9a964b7093239d921e0431db",
+          "behavior": "once",
+          "window_ms": 200,
+          "hold_ms": 400,
+          "debounce_ms": 12,
+          "button_policy": "passthrough",
+          "enabled": true,
+          "trigger_id": "750d44ed895f4394b56f8bd04ad257ff"
+        },
+        {
+          "buttons": [
+            "left"
+          ],
+          "device": "mouse",
+          "gesture": "chord",
+          "action": "start_mode_trajectory",
+          "target_mode": "d7870aab9a964b7093239d921e0431db",
+          "behavior": "hold",
+          "window_ms": 200,
+          "hold_ms": 400,
+          "debounce_ms": 12,
+          "button_policy": "passthrough",
+          "enabled": true,
+          "trigger_id": "2e5fd1da97c0466d84dcbb63957eef70"
+        }
+      ],
+      "run_policy": {
+        "run_mode": "hold",
+        "stop_action": "return",
+        "loop_join": "return",
+        "return_easing": "smoothstep",
+        "repeat_count": 1,
+        "duration_ms": 1000,
+        "return_ms": 250,
+        "transition_ms": 250,
+        "transition_action": "smooth",
+        "transition_easing": "smoothstep",
+        "origin_x": 0,
+        "origin_y": 0
+      }
+    },
+    {
+      "name": "模式 2",
+      "points": [],
+      "image": null,
+      "perturbation": {
+        "amplitude": 0,
+        "frequency_hz": 1,
+        "seed": 0
+      },
+      "mode_id": "8cdc5541b742406db4ae3f29ba04f805",
+      "triggers": [
+        {
+          "buttons": [
+            "side2"
+          ],
+          "device": "mouse",
+          "gesture": "click",
+          "action": "toggle_mode",
+          "target_mode": "8cdc5541b742406db4ae3f29ba04f805",
+          "behavior": "once",
+          "window_ms": 200,
+          "hold_ms": 400,
+          "debounce_ms": 12,
+          "button_policy": "passthrough",
+          "enabled": true,
+          "trigger_id": "664002038a2b428197ccdfc6408f5ebd"
+        },
+        {
+          "buttons": [
+            "left"
+          ],
+          "device": "mouse",
+          "gesture": "chord",
+          "action": "start_mode_trajectory",
+          "target_mode": "8cdc5541b742406db4ae3f29ba04f805",
+          "behavior": "hold",
+          "window_ms": 200,
+          "hold_ms": 400,
+          "debounce_ms": 12,
+          "button_policy": "passthrough",
+          "enabled": true,
+          "trigger_id": "89211ce156244aaf98235bec2b8b1ad9"
+        }
+      ],
+      "run_policy": {
+        "run_mode": "hold",
+        "stop_action": "return",
+        "loop_join": "return",
+        "return_easing": "smoothstep",
+        "repeat_count": 1,
+        "duration_ms": 1000,
+        "return_ms": 250,
+        "transition_ms": 250,
+        "transition_action": "smooth",
+        "transition_easing": "smoothstep",
+        "origin_x": 0,
+        "origin_y": 0
+      }
+    },
+    {
+      "name": "模式 3",
+      "points": [],
+      "image": null,
+      "perturbation": {
+        "amplitude": 0,
+        "frequency_hz": 1,
+        "seed": 0
+      },
+      "mode_id": "8217dfdf70824a6bb836643aab980752",
+      "triggers": [
+        {
+          "buttons": [
+            "side1",
+            "wheel_up"
+          ],
+          "device": "mouse",
+          "gesture": "click",
+          "action": "toggle_mode",
+          "target_mode": "8217dfdf70824a6bb836643aab980752",
+          "behavior": "once",
+          "window_ms": 200,
+          "hold_ms": 400,
+          "debounce_ms": 12,
+          "button_policy": "passthrough",
+          "enabled": true,
+          "trigger_id": "dabef362434d41cf948ef72906a3c88d"
+        },
+        {
+          "buttons": [
+            "left"
+          ],
+          "device": "mouse",
+          "gesture": "chord",
+          "action": "start_mode_trajectory",
+          "target_mode": "8217dfdf70824a6bb836643aab980752",
+          "behavior": "hold",
+          "window_ms": 200,
+          "hold_ms": 400,
+          "debounce_ms": 12,
+          "button_policy": "passthrough",
+          "enabled": true,
+          "trigger_id": "1505be8eba7941fe8831e14c1e2aecae"
+        }
+      ],
+      "run_policy": {
+        "run_mode": "hold",
+        "stop_action": "return",
+        "loop_join": "return",
+        "return_easing": "smoothstep",
+        "repeat_count": 1,
+        "duration_ms": 1000,
+        "return_ms": 250,
+        "transition_ms": 250,
+        "transition_action": "smooth",
+        "transition_easing": "smoothstep",
+        "origin_x": 0,
+        "origin_y": 0
+      }
+    },
+    {
+      "name": "模式 4",
+      "points": [],
+      "image": null,
+      "perturbation": {
+        "amplitude": 0,
+        "frequency_hz": 1,
+        "seed": 0
+      },
+      "mode_id": "eab3382ada3d4460a3c4e95c0e47e261",
+      "triggers": [
+        {
+          "buttons": [
+            "side1",
+            "wheel_down"
+          ],
+          "device": "mouse",
+          "gesture": "click",
+          "action": "toggle_mode",
+          "target_mode": "eab3382ada3d4460a3c4e95c0e47e261",
+          "behavior": "once",
+          "window_ms": 200,
+          "hold_ms": 400,
+          "debounce_ms": 12,
+          "button_policy": "passthrough",
+          "enabled": true,
+          "trigger_id": "67e31b43910741a9b7f6ab7cbd857b63"
+        },
+        {
+          "buttons": [
+            "left"
+          ],
+          "device": "mouse",
+          "gesture": "chord",
+          "action": "start_mode_trajectory",
+          "target_mode": "eab3382ada3d4460a3c4e95c0e47e261",
+          "behavior": "hold",
+          "window_ms": 200,
+          "hold_ms": 400,
+          "debounce_ms": 12,
+          "button_policy": "passthrough",
+          "enabled": true,
+          "trigger_id": "c59cca18454f42acab398c004e4fc0a4"
+        }
+      ],
+      "run_policy": {
+        "run_mode": "hold",
+        "stop_action": "return",
+        "loop_join": "return",
+        "return_easing": "smoothstep",
+        "repeat_count": 1,
+        "duration_ms": 1000,
+        "return_ms": 250,
+        "transition_ms": 250,
+        "transition_action": "smooth",
+        "transition_easing": "smoothstep",
+        "origin_x": 0,
+        "origin_y": 0
+      }
+    },
+    {
+      "name": "模式 5",
+      "points": [],
+      "image": null,
+      "perturbation": {
+        "amplitude": 0,
+        "frequency_hz": 1,
+        "seed": 0
+      },
+      "mode_id": "dc37e4fb86cc4926bf03df6f90ea4a85",
+      "triggers": [
+        {
+          "buttons": [
+            "side2",
+            "wheel_up"
+          ],
+          "device": "mouse",
+          "gesture": "click",
+          "action": "toggle_mode",
+          "target_mode": "dc37e4fb86cc4926bf03df6f90ea4a85",
+          "behavior": "once",
+          "window_ms": 200,
+          "hold_ms": 400,
+          "debounce_ms": 12,
+          "button_policy": "passthrough",
+          "enabled": true,
+          "trigger_id": "3266e4f21aca4faa96bcdab00ef6acb3"
+        },
+        {
+          "buttons": [
+            "left"
+          ],
+          "device": "mouse",
+          "gesture": "chord",
+          "action": "start_mode_trajectory",
+          "target_mode": "dc37e4fb86cc4926bf03df6f90ea4a85",
+          "behavior": "hold",
+          "window_ms": 200,
+          "hold_ms": 400,
+          "debounce_ms": 12,
+          "button_policy": "passthrough",
+          "enabled": true,
+          "trigger_id": "2c9d6be001014a9893e9111eece528c4"
+        }
+      ],
+      "run_policy": {
+        "run_mode": "hold",
+        "stop_action": "return",
+        "loop_join": "return",
+        "return_easing": "smoothstep",
+        "repeat_count": 1,
+        "duration_ms": 1000,
+        "return_ms": 250,
+        "transition_ms": 250,
+        "transition_action": "smooth",
+        "transition_easing": "smoothstep",
+        "origin_x": 0,
+        "origin_y": 0
+      }
+    },
+    {
+      "name": "模式 6",
+      "points": [],
+      "image": null,
+      "perturbation": {
+        "amplitude": 0,
+        "frequency_hz": 1,
+        "seed": 0
+      },
+      "mode_id": "680ee34616ca4fbbb29536de9231b697",
+      "triggers": [
+        {
+          "buttons": [
+            "side2",
+            "wheel_down"
+          ],
+          "device": "mouse",
+          "gesture": "click",
+          "action": "toggle_mode",
+          "target_mode": "680ee34616ca4fbbb29536de9231b697",
+          "behavior": "once",
+          "window_ms": 200,
+          "hold_ms": 400,
+          "debounce_ms": 12,
+          "button_policy": "passthrough",
+          "enabled": true,
+          "trigger_id": "006f2fb9c6544d92be1eda9bdcbcccf3"
+        },
+        {
+          "buttons": [
+            "left"
+          ],
+          "device": "mouse",
+          "gesture": "chord",
+          "action": "start_mode_trajectory",
+          "target_mode": "680ee34616ca4fbbb29536de9231b697",
+          "behavior": "hold",
+          "window_ms": 200,
+          "hold_ms": 400,
+          "debounce_ms": 12,
+          "button_policy": "passthrough",
+          "enabled": true,
+          "trigger_id": "9717286ce8c2482f9a21286e1238f8ae"
+        }
+      ],
+      "run_policy": {
+        "run_mode": "hold",
+        "stop_action": "return",
+        "loop_join": "return",
+        "return_easing": "smoothstep",
+        "repeat_count": 1,
+        "duration_ms": 1000,
+        "return_ms": 250,
+        "transition_ms": 250,
+        "transition_action": "smooth",
+        "transition_easing": "smoothstep",
+        "origin_x": 0,
+        "origin_y": 0
+      }
+    },
+    {
+      "name": "模式 7",
+      "points": [],
+      "image": null,
+      "perturbation": {
+        "amplitude": 0,
+        "frequency_hz": 1,
+        "seed": 0
+      },
+      "mode_id": "7f97f110c0d941b1bf00d98c52e08fa7",
+      "triggers": [
+        {
+          "buttons": [
+            "side1",
+            "right"
+          ],
+          "device": "mouse",
+          "gesture": "click",
+          "action": "toggle_mode",
+          "target_mode": "7f97f110c0d941b1bf00d98c52e08fa7",
+          "behavior": "once",
+          "window_ms": 200,
+          "hold_ms": 400,
+          "debounce_ms": 12,
+          "button_policy": "passthrough",
+          "enabled": true,
+          "trigger_id": "dda6110e35ff4513bcdbcb8b8db8f351"
+        },
+        {
+          "buttons": [
+            "left"
+          ],
+          "device": "mouse",
+          "gesture": "chord",
+          "action": "start_mode_trajectory",
+          "target_mode": "7f97f110c0d941b1bf00d98c52e08fa7",
+          "behavior": "hold",
+          "window_ms": 200,
+          "hold_ms": 400,
+          "debounce_ms": 12,
+          "button_policy": "passthrough",
+          "enabled": true,
+          "trigger_id": "a7f19526d3a5460a8e15094152d550d7"
+        }
+      ],
+      "run_policy": {
+        "run_mode": "hold",
+        "stop_action": "return",
+        "loop_join": "return",
+        "return_easing": "smoothstep",
+        "repeat_count": 1,
+        "duration_ms": 1000,
+        "return_ms": 250,
+        "transition_ms": 250,
+        "transition_action": "smooth",
+        "transition_easing": "smoothstep",
+        "origin_x": 0,
+        "origin_y": 0
+      }
+    },
+    {
+      "name": "模式 8",
+      "points": [],
+      "image": null,
+      "perturbation": {
+        "amplitude": 0,
+        "frequency_hz": 1,
+        "seed": 0
+      },
+      "mode_id": "f7ea3109ac6e44938dc5e00613456a76",
+      "triggers": [
+        {
+          "buttons": [
+            "side2",
+            "right"
+          ],
+          "device": "mouse",
+          "gesture": "click",
+          "action": "toggle_mode",
+          "target_mode": "f7ea3109ac6e44938dc5e00613456a76",
+          "behavior": "once",
+          "window_ms": 200,
+          "hold_ms": 400,
+          "debounce_ms": 12,
+          "button_policy": "passthrough",
+          "enabled": true,
+          "trigger_id": "cf5a4134bc6c428ea88d0c2adc6fbeee"
+        },
+        {
+          "buttons": [
+            "left"
+          ],
+          "device": "mouse",
+          "gesture": "chord",
+          "action": "start_mode_trajectory",
+          "target_mode": "f7ea3109ac6e44938dc5e00613456a76",
+          "behavior": "hold",
+          "window_ms": 200,
+          "hold_ms": 400,
+          "debounce_ms": 12,
+          "button_policy": "passthrough",
+          "enabled": true,
+          "trigger_id": "181ecaf62ce846a0925d20e9d9b77521"
+        }
+      ],
+      "run_policy": {
+        "run_mode": "hold",
+        "stop_action": "return",
+        "loop_join": "return",
+        "return_easing": "smoothstep",
+        "repeat_count": 1,
+        "duration_ms": 1000,
+        "return_ms": 250,
+        "transition_ms": 250,
+        "transition_action": "smooth",
+        "transition_easing": "smoothstep",
+        "origin_x": 0,
+        "origin_y": 0
+      }
+    }
+  ],
+  "active_mode": 0,
+  "view": {
+    "center_x": 0,
+    "center_y": 0,
+    "zoom": 1
+  },
+  "editor_state": {
+    "v2_controls": {
+      "_global_execute": [
+        "left"
+      ],
+      "d7870aab9a964b7093239d921e0431db": {
+        "ids": [
+          "750d44ed895f4394b56f8bd04ad257ff",
+          "2e5fd1da97c0466d84dcbb63957eef70"
+        ],
+        "selector": [
+          "side1"
+        ],
+        "execute": [
+          "left"
+        ],
+        "independent": false,
+        "gesture": "click",
+        "execute_gesture": "chord",
+        "behavior": "hold"
+      },
+      "8cdc5541b742406db4ae3f29ba04f805": {
+        "ids": [
+          "664002038a2b428197ccdfc6408f5ebd",
+          "89211ce156244aaf98235bec2b8b1ad9"
+        ],
+        "selector": [
+          "side2"
+        ],
+        "execute": [
+          "left"
+        ],
+        "independent": false,
+        "gesture": "click",
+        "execute_gesture": "chord",
+        "behavior": "hold"
+      },
+      "8217dfdf70824a6bb836643aab980752": {
+        "ids": [
+          "dabef362434d41cf948ef72906a3c88d",
+          "1505be8eba7941fe8831e14c1e2aecae"
+        ],
+        "selector": [
+          "side1",
+          "wheel_up"
+        ],
+        "execute": [
+          "left"
+        ],
+        "independent": false,
+        "gesture": "click",
+        "execute_gesture": "chord",
+        "behavior": "hold"
+      },
+      "eab3382ada3d4460a3c4e95c0e47e261": {
+        "ids": [
+          "67e31b43910741a9b7f6ab7cbd857b63",
+          "c59cca18454f42acab398c004e4fc0a4"
+        ],
+        "selector": [
+          "side1",
+          "wheel_down"
+        ],
+        "execute": [
+          "left"
+        ],
+        "independent": false,
+        "gesture": "click",
+        "execute_gesture": "chord",
+        "behavior": "hold"
+      },
+      "dc37e4fb86cc4926bf03df6f90ea4a85": {
+        "ids": [
+          "3266e4f21aca4faa96bcdab00ef6acb3",
+          "2c9d6be001014a9893e9111eece528c4"
+        ],
+        "selector": [
+          "side2",
+          "wheel_up"
+        ],
+        "execute": [
+          "left"
+        ],
+        "independent": false,
+        "gesture": "click",
+        "execute_gesture": "chord",
+        "behavior": "hold"
+      },
+      "680ee34616ca4fbbb29536de9231b697": {
+        "ids": [
+          "006f2fb9c6544d92be1eda9bdcbcccf3",
+          "9717286ce8c2482f9a21286e1238f8ae"
+        ],
+        "selector": [
+          "side2",
+          "wheel_down"
+        ],
+        "execute": [
+          "left"
+        ],
+        "independent": false,
+        "gesture": "click",
+        "execute_gesture": "chord",
+        "behavior": "hold"
+      },
+      "7f97f110c0d941b1bf00d98c52e08fa7": {
+        "ids": [
+          "dda6110e35ff4513bcdbcb8b8db8f351",
+          "a7f19526d3a5460a8e15094152d550d7"
+        ],
+        "selector": [
+          "side1",
+          "right"
+        ],
+        "execute": [
+          "left"
+        ],
+        "independent": false,
+        "gesture": "click",
+        "execute_gesture": "chord",
+        "behavior": "hold"
+      },
+      "f7ea3109ac6e44938dc5e00613456a76": {
+        "ids": [
+          "cf5a4134bc6c428ea88d0c2adc6fbeee",
+          "181ecaf62ce846a0925d20e9d9b77521"
+        ],
+        "selector": [
+          "side2",
+          "right"
+        ],
+        "execute": [
+          "left"
+        ],
+        "independent": false,
+        "gesture": "click",
+        "execute_gesture": "chord",
+        "behavior": "hold"
+      }
+    }
+  },
+  "bypass": {
+    "button": null,
+    "behavior": "hold"
+  }
+}

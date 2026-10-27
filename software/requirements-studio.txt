@@ -1,0 +1,2 @@
+# SDK remains standard-library-only. This optional APP dependency handles images.
+Pillow>=10.0

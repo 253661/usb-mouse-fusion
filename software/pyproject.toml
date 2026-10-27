@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mouse-fusion-sdk"
+version = "0.2.0"
+description = "Local USB Mouse Fusion service, open API and Python SDK"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.scripts]
+mouse-fusion-service = "mouse_fusion.service:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
