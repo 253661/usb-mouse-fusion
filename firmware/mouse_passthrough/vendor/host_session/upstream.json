@@ -1,0 +1,8 @@
+{
+  "project": "TinyUSB",
+  "commit": "86ad6e56c1700e85f1c5678607a762cfe3aa2f47",
+  "source": "src/host/usbh.c",
+  "source_sha256": "79403ed03e1e60f0bfda8708096b56b6ec313d3a237e62d1e210f4ef571963d7",
+  "license": "MIT; original copyright/license retained verbatim in generated source",
+  "scope": "One generated USBH translation unit in this project; original SDK/HCD/PIO unchanged"
+}

@@ -1,0 +1,41 @@
+{
+  "repository": "https://github.com/pasztorpisti/hid-report-parser",
+  "commit": "2ec9b054decd44a7560d1554e56593e18b4df29b",
+  "license": "MIT; retained LICENSE.txt and source SPDX",
+  "files": [
+    {
+      "file": "hid_report_parser.h",
+      "upstream_git_blob": "efec3c7d76e84c7891b1089d208c7f1a241ec950",
+      "upstream_sha256": "719177c7bafdb417035b91dac5c9cf0e59e29bd68edc5647151c0a9647793b4b",
+      "local_sha256": "e705e6e85369f024eba70846a1efe860fbbcac6b47c4b2f84183b709f6a557e4"
+    },
+    {
+      "file": "hid_report_parser.cpp",
+      "upstream_git_blob": "d83f975e92af7e73aab0720657113be8aad75258",
+      "upstream_sha256": "769a679377ce21840f9d9f04151d51553bfc1d323f3917a40e0f6d619493306b",
+      "local_sha256": "94d2e3aa92b7030bf4f3662bf23678d8f9c738ce03e18ea19314c0449e3c3200"
+    },
+    {
+      "file": "LICENSE.txt",
+      "upstream_git_blob": "6708624c90b16c7bc89a1e41e7638e484164d960",
+      "upstream_sha256": "494b26843fb50b5b8a4b2628276f4423b6997b8d8eb92019dfc6d6a0605e3154",
+      "local_sha256": "494b26843fb50b5b8a4b2628276f4423b6997b8d8eb92019dfc6d6a0605e3154"
+    }
+  ],
+  "patch": "hid-report-parser/local.patch",
+  "changes": [
+    "Descriptor-only compile guards exclude allocating high-level APIs and containers",
+    "Check both initial UsageMin/UsageMax AddUsageRange failures",
+    "Honor extended Usage page for Collection",
+    "Bound Long Item skip; adapter still rejects all Long Items",
+    "Balance UsageMin case scope when strict lonely-range checking is enabled",
+    "Descriptor-only mode preserves signed Maximum for negative Minimum; invalid ranges reject"
+  ],
+  "configuration": {
+    "HRP_DESCRIPTOR_ONLY": 1,
+    "HRP_MAX_USAGE_RANGES_PER_MAIN_ITEM": 32,
+    "HRP_MAX_PUSH_POP_STACK_SIZE": 4,
+    "HRP_IGNORE_LONELY_USAGE_MIN_OR_MAX": 0
+  },
+  "reference_only": "hid-remapper@51ab8b367b810d1deb0d3e487e9b7fe8c7e9c24e; no board/fork/UF2 imported"
+}

@@ -1,0 +1,109 @@
+--- upstream/hid_report_parser.h
++++ local/hid_report_parser.h
+@@ -5,9 +5,11 @@
+ #include <assert.h>
+ #include <string.h>
+ #include <stdint.h>
++#ifndef HRP_DESCRIPTOR_ONLY
+ #include <vector>
+ #include <map>
+ #include <set>
++#endif
+ 
+ 
+ // The accepted max value of a REPORT_SIZE item in the descriptor.
+@@ -1371,6 +1373,7 @@
+ 	};
+ 
+ 
++#ifndef HRP_DESCRIPTOR_ONLY
+ 	// The methods of IInt32Target are called only by SelectiveInputReportParser::Init.
+ 	// After Init the IInt32Target instance isn't anymore needed but the buffer
+ 	// pointer returned by its Data() method may be stored and used by the
+@@ -2715,4 +2718,5 @@
+ 	};
+ 
+ 
++#endif // HRP_DESCRIPTOR_ONLY
+ } // namespace hid
+--- upstream/hid_report_parser.cpp
++++ local/hid_report_parser.cpp
+@@ -201,7 +201,7 @@
+ 			auto bytes_left = q - p;
+ 
+ 			if (b == ITEM_LONG) { // long item, skipping
+-				if (bytes_left < 1)
++				if (bytes_left < 2 || (size_t)*p > (size_t)bytes_left - 2)
+ 					return ERR_INCOMPLETE_ITEM;
+ 				p += 2 + (size_t)*p;
+ 				continue;
+@@ -279,7 +279,10 @@
+ 			// but parsers seem to ignore them. HID specification:
+ 			//     String and Physical indices, as well as
+ 			//     delimiters may be associated with collections.
+-			return handler->BeginCollection(collection_type, _globals.usage_page, _locals.FirstUsage(), _collection_depth);
++			return handler->BeginCollection(collection_type,
++				_locals.num_usage_ranges && _locals.usage_ranges[0].usage_page
++					? _locals.usage_ranges[0].usage_page : _globals.usage_page,
++				_locals.FirstUsage(), _collection_depth);
+ 		}
+ 
+ 		case ITEM_END_COLLECTION:
+@@ -402,10 +405,13 @@
+ 			else {
+ 				if (!int32_data(p_data, data_size, _globals.logical_max))
+ 					return ERR_UNSPECIFIED;
++#ifndef HRP_DESCRIPTOR_ONLY
++				// The fixed-layout adapter rejects invalid signed ranges; do not guess.
+ 				if (_globals.logical_max < _globals.logical_min) {
+ 					if (!uint32_data(p_data, data_size, (uint32_t&)_globals.logical_max))
+ 						return ERR_UNSPECIFIED;
+ 				}
++#endif
+ 			}
+ 			break;
+ 
+@@ -496,8 +502,8 @@
+ 
+ 			switch (_locals.flags & (Locals::FLAG_USAGE_MIN | Locals::FLAG_USAGE_MAX)) {
+ 			case Locals::FLAG_USAGE_MIN:
++			{
+ #if HRP_IGNORE_LONELY_USAGE_MIN_OR_MAX
+-			{
+ 
+ 				// Overwriting the previous USAGE_MIN that wasn't closed with a USAGE_MAX.
+ 				UsageRange& r = _locals.usage_ranges[_locals.num_usage_ranges - 1];
+@@ -520,7 +526,8 @@
+ 				break;
+ 			}
+ 			case 0:
+-				_locals.AddUsageRange(usage, usage, usage_page);
++				if (!_locals.AddUsageRange(usage, usage, usage_page))
++					return ERR_TOO_MANY_USAGES;
+ 				_locals.flags |= Locals::FLAG_USAGE_MIN;
+ 				break;
+ 			}
+@@ -555,7 +562,8 @@
+ 				break;
+ 			}
+ 			case 0:
+-				_locals.AddUsageRange(usage, usage, usage_page);
++				if (!_locals.AddUsageRange(usage, usage, usage_page))
++					return ERR_TOO_MANY_USAGES;
+ 				_locals.flags |= Locals::FLAG_USAGE_MAX;
+ 				break;
+ 			}
+@@ -598,6 +606,7 @@
+ 		return true;
+ 	}
+ 
++#ifndef HRP_DESCRIPTOR_ONLY
+ 	int SelectiveInputReportParser::Init(Collection* input_fields, const void* descriptor, size_t descriptor_size) {
+ 		Reset();
+ 		if (!input_fields || !descriptor || !descriptor_size)
+@@ -1397,4 +1406,5 @@
+ 	}
+ 
+ 
++#endif // HRP_DESCRIPTOR_ONLY
+ } // namespace hid
